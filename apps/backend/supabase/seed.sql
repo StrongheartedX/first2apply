@@ -210,7 +210,8 @@ begin
   return query
   select *
   from jobs
-  where status = jobs_status
+  where user_id = auth.uid()
+    and status = jobs_status
     and (jobs_after is null or (updated_at, id) < (after_updated_at, after_id))
     and (array_length(jobs_site_ids, 1) is null or "siteId" = any(jobs_site_ids))
     and (array_length(jobs_link_ids, 1) is null or link_id = any(jobs_link_ids))
@@ -401,7 +402,8 @@ begin
   return query
   select j.status, count(*) as job_count
   from jobs j
-  where (jobs_status is null or j.status = jobs_status)
+  where user_id = auth.uid()
+    and (jobs_status is null or j.status = jobs_status)
     and (array_length(jobs_site_ids, 1) is null or j."siteId" = any(jobs_site_ids))
     and (array_length(jobs_link_ids, 1) is null or j.link_id = any(jobs_link_ids))
     and (array_length(jobs_labels, 1) is null or labels && jobs_labels)
