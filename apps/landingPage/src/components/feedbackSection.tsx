@@ -11,6 +11,24 @@ type Review = {
 
 const reviews: Review[] = [
   {
+    title: 'Great Job Search Tool - Highly Recommend',
+    details:
+      "I started off with the free version and quickly progressed to the paid Pro version. For me, well worth the money. The AI filter does a good job of filtering out all the job posts that fall outside of the criteria you yourself specify. Use everyday language to describe the jobs you are searching for … and those you want excluded. Fine tune your AI Filter based on results. The recent upgrade increased the AI search facility to 1000 characters. A huge improvement and far more than I find I need. I've started using the Beta Google Search option which allows you to search ATS sites directly. This is working pretty well. First2Apply will tell you when one of your searches isn't working. It's easy to reset the search. Sometimes it's caused by Google questioning unusual activity which you can resolve in the usual way. First2Apply has already saved me hours of searching and filtering myself Hence the reason for taking the time to write this review!!",
+    source: {
+      href: 'https://apps.microsoft.com/detail/9nk18wv87sv2?hl=en-us&gl=US">MS Store Reviews',
+      name: 'MS Store Reviews',
+    },
+  },
+  {
+    title: 'This is AWESOME',
+    details:
+      'Only been using the application for a day, but I can already tell it blows the competition out of the water. I love the automatic refresh on the searches and how the application filters out applications via keyword (and which keywords filtered out a particular application). Very intuitive, great product!',
+    source: {
+      href: 'https://first2apply.com/',
+      name: 'Internal Feedback',
+    },
+  },
+  {
     title: 'Helped me find a job within a few days of installing!',
     details:
       "After being able to only send out about 5-10 applications a day, which usually took me about 3 hours of parsing through a bunch of suggestions that simply weren't relevant to me, this app immensely increased my productivity! I was able to send out about 30-40 applications most days, in the course of about 2 hours. It also found jobs that I would've otherwise not seen! But most importantly, it allowed me to be one of the first applicants (I believe I was within the first 5) to a particular job, which I am sure was instrumental in me then landing that position!",
