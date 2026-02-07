@@ -220,7 +220,7 @@ export async function parseCustomJobDescription({
     .from('advanced_matching')
     .select('*')
     .eq('user_id', user.id)
-    .single();
+    .maybeSingle();
   if (getAdvancedMatchingRecordError) {
     context.logger.error(
       `Failed to load advanced matching config for user ${user.id}: ${getAdvancedMatchingRecordError.message}`,
@@ -253,7 +253,7 @@ ${withAdvancedMatchingPreferences}
 
   const { userPrompt, htmlContent } = generateUserPrompt();
   const { openAi, llmConfig } = buildOpenAiClient({
-    modelName: 'gpt-4o-mini',
+    modelName: 'gpt-5-mini',
     ...context,
   });
 
