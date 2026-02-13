@@ -13,7 +13,8 @@ export function parseLinkedInJobs({ siteId, html }: { siteId: number; html: stri
   const noResultsNode =
     document.querySelector('.no-results') ||
     document.querySelector('.jobs-search-no-results-banner') ||
-    document.querySelector('.jobs-semantic-search__no-results');
+    document.querySelector('.jobs-semantic-search__no-results') ||
+    document.querySelector('svg#empty-room-small');
   if (noResultsNode) {
     return {
       jobs: [],
